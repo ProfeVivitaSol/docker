@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApigatewayApplication<apigateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.reservacanchas.apigateway.ApigatewayApplication",
+            "projectName": "apigateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiciocanchasApplication<serviciocanchas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.clubdeportivo.serviciocanchas.ServiciocanchasApplication",
+            "projectName": "serviciocanchas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicioreservasApplication<servicioreservas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.clubdeportivo2.servicioreservas.ServicioreservasApplication",
+            "projectName": "servicioreservas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

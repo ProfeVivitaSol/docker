@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+
+  apigateway:
+    build: ./apigateway
+    ports:
+      - "9090:9090"
+    depends_on:
+      - servicioreservas
+      - serviciocanchas
+    networks:
+      - spring-net
+
+  servicioreservas:
+    build: "./servicioreservas - Version WebCliente"
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-reservas:5432/basereservas
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin1234
+      - CANCHAS_SERVICE_URL=http://serviciocanchas:8083
+    depends_on:
+      - db-reservas
+    networks:
+      - spring-net
+
+  serviciocanchas:
+    build: "./serviciocanchas - Version WebCliente"
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-canchas:5432/basecancha
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin1234
+    depends_on:
+      - db-canchas
+    networks:
+      - spring-net
+
+  db-reservas:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: basereservas
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin1234
+    ports:
+      - "5434:5432"
+    volumes:
+      - reservas-data:/var/lib/postgresql/data
+    networks:
+      - spring-net
+
+  db-canchas:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: basecancha
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin1234
+    ports:
+      - "5433:5432"
+    volumes:
+      - canchas-data:/var/lib/postgresql/data
+    networks:
+      - spring-net
+
+networks:
+  spring-net:
+
+volumes:
+  reservas-data:
+  canchas-data:

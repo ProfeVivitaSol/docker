@@ -13,24 +13,6 @@ Este proyecto está pensado como apoyo educativo para estudiantes de Ingeniería
 - Maven
 - Java 21
 
-### 📁 Estructura del proyecto
-
-docker/
-│
-├── servicio-usuarios/
-│   ├── Dockerfile
-│   ├── pom.xml
-│   └── src/
-│
-├── servicio-reservas/
-│   ├── Dockerfile
-│   ├── pom.xml
-│   └── src/
-│
-├── docker-compose.yml
-│
-└── README.md
-
 ### 🐳 Dockerfile explicado
 
 Ejemplo utilizado en los servicios:

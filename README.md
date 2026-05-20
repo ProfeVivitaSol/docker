@@ -1,10 +1,10 @@
 
-# 🐳 Docker - Microservicios con Spring Boot
+### 🐳 Docker - Microservicios con Spring Boot
 
 Repositorio de ejemplo para trabajar con Docker, Docker Compose y microservicios utilizando Spring Boot y PostgreSQL.
 Este proyecto está pensado como apoyo educativo para estudiantes de Ingeniería en Informática y personas que estén comenzando en el mundo de los contenedores.
 
-# 📦 Tecnologías utilizadas
+### 📦 Tecnologías utilizadas
 
 - Docker
 - Docker Compose
@@ -13,7 +13,7 @@ Este proyecto está pensado como apoyo educativo para estudiantes de Ingeniería
 - Maven
 - Java 21
 
-# 📁 Estructura del proyecto
+### 📁 Estructura del proyecto
 
 ```bash
 docker/
@@ -32,7 +32,7 @@ docker/
 │
 └── README.md
 
-🐳 Dockerfile explicado
+### 🐳 Dockerfile explicado
 
 Ejemplo utilizado en los servicios:
 
@@ -49,7 +49,7 @@ EXPOSE 9090
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-🔍 Explicación
+### 🔍 Explicación
 
 | Línea                     | Descripción                              |
 | ------------------------- | ---------------------------------------- |
@@ -62,7 +62,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 | `EXPOSE 9090`             | Expone el puerto del servicio            |
 | `ENTRYPOINT`              | Ejecuta la aplicación                    |
 
-🧩 Docker Compose
+### 🧩 Docker Compose
 
 Ejemplo básico:
 version: '3.9'
@@ -85,7 +85,7 @@ services:
     ports:
       - "5434:5432"
 
-▶️ Comandos básicos de Docker
+### ▶️ Comandos básicos de Docker
 - Construir una imagen
   docker build -t servicio-usuarios .
 
@@ -107,7 +107,7 @@ services:
 - Eliminar una imagen
   docker rmi ID_IMAGEN
 
-🐙 Comandos Docker Compose
+### 🐙 Comandos Docker Compose
 
 - Levantar servicios
   docker compose up
@@ -121,6 +121,6 @@ services:
 - Reconstruir imágenes
   docker compose up --build
 
-✨ Autor
+### ✨ Autor
 Desarrollado por Profe Vivitasol
 

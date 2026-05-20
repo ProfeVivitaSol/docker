@@ -15,7 +15,6 @@ Este proyecto está pensado como apoyo educativo para estudiantes de Ingeniería
 
 ### 📁 Estructura del proyecto
 
-```bash
 docker/
 │
 ├── servicio-usuarios/

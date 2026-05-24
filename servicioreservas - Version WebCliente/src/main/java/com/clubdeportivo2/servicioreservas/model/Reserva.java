@@ -78,9 +78,5 @@ public class Reserva {
         this.horaFin = horaFin;
     }
 
-    
-
-
-    
 
 }
